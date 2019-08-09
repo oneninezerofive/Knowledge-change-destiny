@@ -9,6 +9,9 @@
 
 export default {
   name: "app",
+  data() {
+    branch: ying;
+  },
   components: {
     // Home
   }
