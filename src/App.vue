@@ -12,7 +12,6 @@ export default {
   components: {
     // Home
   }
-  //试一试？
   //ohhhleg
 };
 </script>
