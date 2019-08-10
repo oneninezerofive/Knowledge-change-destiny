@@ -9,7 +9,9 @@ import {
     Submenu,
     MenuItem,
     MenuItemGroup,
-    Col
+    Col,
+    Table,    //表格
+    TableColumn,
 } from 'element-ui'
 
 export default () => {
@@ -22,4 +24,6 @@ export default () => {
     Vue.use(MenuItem);
     Vue.use(MenuItemGroup);
     Vue.use(Col);
+    Vue.use(Table);
+    Vue.use(TableColumn);
 }

@@ -37,8 +37,8 @@ p {
   padding: 0;
 }
 .el-aside {
-  min-height: 100%;
-  background-color: rgb(50, 64, 87);
+  min-height: 754px;
+  background-color: rgb(84, 92, 100);
   color: #fff;
   text-align: center;
   float: left;
