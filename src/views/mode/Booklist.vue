@@ -32,7 +32,8 @@
                 </el-table-column>
             </el-table>
             <div class="Pagination">
-                <el-pagination @current-change="handleCurrentChange" :current-page="currentPage" :page-size="10"
+                <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
+                    :current-page="currentPage" :page-sizes="[10, 20, 30, 40]" :page-size="10"
                     layout="total, prev, pager, next" :total="count+1">
                 </el-pagination>
             </div>
@@ -70,24 +71,9 @@
                 limit: 10,
             }
         },
-        async created() {
-            let books = await this.$axios.get(
-                "https://www.easy-mock.com/mock/5a253821420a172ca90d034a/example/jsmg"
-            );
-            // console.log(books.data);
-            // this.tableData = [];
-            books.data.forEach((item, index) => {
-                const tableData = {};
-                tableData.name = item.book;
-                tableData.description = item.jianjie;
-                tableData.rating = item.author;
-                tableData.index = index;
-                this.count = index;
-                this.tableData.push(tableData);
-
-            });
-            // console.log(this.tableData);
-        },
+         created(){
+             this.initdata();
+         },
         methods: {
             gai(index) {
                 // console.log(this.tableData[row]);
@@ -99,13 +85,42 @@
             del(index, rows) {
                 rows.splice(index, 1);
             },
-            updatebook() {
+            async initdata() {
+                let book = await this.$axios("http://localhost:3000/test");
+                // console.log(books.data);
+                // this.tableData = [];
+                let books = book.data.reverse();
+                books.forEach((item, index) => {
+                    const tableData = {};
+                    tableData.name = item.book;
+                    tableData.description = item.jianjie;
+                    tableData.rating = item.author;
+                    // tableData.index = index;
+                    this.count = index;
+                    this.tableData.push(tableData);
+
+                });
+                // console.log(this.count);
+            },
+            async updatebook() {
                 this.dialogFormVisible = false;
+                let str = await this.$axios('http://localhost:3000/edit', {
+                    params: {
+                        book: this.selectTable.name,
+                        jianjie: this.selectTable.description,
+                        author: this.selectTable.rating
+                    }
+                });
+                // console.log(str);
+
+            },
+            handleSizeChange(val) {
+                console.log(`每页 ${val} 条`);
             },
             handleCurrentChange(val) {
                 this.currentPage = val;
                 this.offset = (val - 1) * this.limit;
-                // this.tableData.slice(0,10)
+                this.initdata();
             },
         },
     }

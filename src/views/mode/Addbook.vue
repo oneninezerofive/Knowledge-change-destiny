@@ -95,7 +95,18 @@
             addCategoryFun() {
                 this.showAddCategory = !this.showAddCategory;
             },
-            add(){}
+            async add() {
+                  this.dialogFormVisible = false;
+                 let str = await this.$axios('http://localhost:3000/add',
+                { 
+                    params:{
+                     book : this.bookForm.name,
+                     jianjie:this.bookForm.jianjie,
+                     author : this.bookForm.author
+                }
+                 })
+                // console.log(str); 
+            },
         }
     }
 </script>
