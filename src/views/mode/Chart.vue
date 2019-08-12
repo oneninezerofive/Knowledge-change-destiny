@@ -1,30 +1,30 @@
 <template>
-    <div data-v-11f8311a="" class="el-col el-col-20" style="height: 100%; overflow: auto;">
-        <div data-v-11f8311a="">
+  <div data-v-11f8311a="" class="el-col el-col-20" style="height: 100%; overflow: auto;">
+    <div data-v-11f8311a="">
 
-            <!-- 头部标题 -->
-            <div class="header_container">
-                <div class="el-breadcrumb">
-                    <span class="el-breadcrumb__item">
-                        <span class="el-breadcrumb__item__inner">首页</span>
-                        <span class="el-breadcrumb__separator">/</span>
-                    </span>
-                    <span class="el-breadcrumb__item">
-                        <span class="el-breadcrumb__item__inner">图表</span>
-                        <span class="el-breadcrumb__separator">/</span>
-                    </span>
-                    <span class="el-breadcrumb__item">
-                        <span class="el-breadcrumb__item__inner">用户分布</span>
-                        <span class="el-breadcrumb__separator">/</span>
-                    </span>
-                </div>
-                <div class="el-dropdown"><img src="//elm.cangdu.org/img/default.jpg" class="avator"> </div>
-            </div>
-
-            <!-- 图表 -->
-            <ve-pie :data="chartData" width="1010px"></ve-pie>
+      <!-- 头部标题 -->
+      <div class="header_container">
+        <div class="el-breadcrumb">
+          <span class="el-breadcrumb__item">
+            <span class="el-breadcrumb__item__inner">首页</span>
+            <span class="el-breadcrumb__separator">/</span>
+          </span>
+          <span class="el-breadcrumb__item">
+            <span class="el-breadcrumb__item__inner">图表</span>
+            <span class="el-breadcrumb__separator">/</span>
+          </span>
+          <span class="el-breadcrumb__item">
+            <span class="el-breadcrumb__item__inner">用户分布</span>
+            <span class="el-breadcrumb__separator">/</span>
+          </span>
         </div>
+        <div class="el-dropdown"><img src="//elm.cangdu.org/img/default.jpg" class="avator"> </div>
+      </div>
+
+      <!-- 图表 -->
+      <ve-pie :data="chartData" width="1010px"></ve-pie>
     </div>
+  </div>
 </template>
 <script>
 export default {
@@ -69,10 +69,13 @@ export default {
   position: relative;
 }
 .avator {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 37px;
+  position: absolute;
+  top: -18px;
+  right: 70px;
 }
 .el-dropdown-menu {
   margin: 5px 0;

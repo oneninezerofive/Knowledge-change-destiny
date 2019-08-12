@@ -26,9 +26,7 @@ import {
     Option, 
     OptionGroup,
     Dialog, //对话框
-    Pagination,//分页
-    Table,//表格
-    TableColumn,
+    Pagination//分页
 } from 'element-ui'
 
 export default () => {
