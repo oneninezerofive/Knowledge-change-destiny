@@ -1,10 +1,16 @@
 <template>
   <el-col :span="12">
-    <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#bfcbd9" active-text-color="#ffd04b" router>
-
+    <el-menu
+      :default-active="$route.path"
+      class="el-menu-vertical-demo"
+      background-color="#545c64"
+      text-color="#bfcbd9"
+      active-text-color="#ffd04b"
+      router
+    >
       <!-- 首页 -->
-      <el-submenu index="0">
-        <template slot="title" @click="gotolink">
+      <el-submenu index="0" @click.native="gotolink">
+        <template slot="title">
           <i class="el-icon-menu"></i>
           <span>首页</span>
         </template>
@@ -19,7 +25,7 @@
         <el-menu-item-group>
           <el-menu-item index="Userlist">用户列表</el-menu-item>
           <el-menu-item index="Booklist">图书列表</el-menu-item>
-          <el-menu-item index="Managers">管理员列表</el-menu-item>
+          <el-menu-item index="Managers" @click="toManagers">管理员列表</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
 
@@ -66,7 +72,6 @@
           <el-menu-item index="Explain">说明</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-
     </el-menu>
   </el-col>
 </template>
@@ -79,15 +84,18 @@ export default {
     };
   },
   methods: {
-    handleOpen(key, keyPath) {
-      // console.log(key, keyPath);
+    // handleOpen(key, keyPath) {
+    //   // console.log(key, keyPath);
+    // },
+    // handleClose(key, keyPath) {
+    //   // console.log(key, keyPath);
+    // },
+    gotolink() {
+      this.$router.push("/home/mian");
     },
-    handleClose(key, keyPath) {
-      // console.log(key, keyPath);
-    },
-    gotolink(){
-     
-      // this.$router.push('/home')
+    // 跳管理员列表
+    toManagers() {
+      this.$router.push("/home/managers");
     }
   }
 };

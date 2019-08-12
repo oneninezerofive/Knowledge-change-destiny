@@ -10,7 +10,7 @@
 export default {
   name: "app",
   data() {
-    branch: ying;
+    return {};
   },
   components: {
     // Home

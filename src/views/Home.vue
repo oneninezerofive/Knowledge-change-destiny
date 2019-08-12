@@ -1,8 +1,9 @@
 <template>
   <el-container>
     <el-aside width="15%">
-      <Nav/>
+      <Nav />
     </el-aside>
+
     <!-- 路由 -->
     <router-view></router-view>
   </el-container>
@@ -11,11 +12,15 @@
 <script>
 import Nav from "../components/Nav.vue";
 export default {
+  data() {
+    return {};
+  },
   components: {
     Nav
   }
 };
 </script>
+
 
 <style>
 body,
