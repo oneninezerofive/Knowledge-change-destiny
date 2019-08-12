@@ -1,51 +1,40 @@
 <template>
-    <div class="fillcontain">
-        <!-- 头部标题 -->
-        <div class="header_container">
-            <div class="el-breadcrumb">
-                <span class="el-breadcrumb__item">
-                    <span class="el-breadcrumb__item__inner">首页</span>
-                    <span class="el-breadcrumb__separator">/</span>
-                </span>
-                <span class="el-breadcrumb__item">
-                    <span class="el-breadcrumb__item__inner">数据管理</span>
-                    <span class="el-breadcrumb__separator">/</span>
-                </span>
-                <span class="el-breadcrumb__item">
-                    <span class="el-breadcrumb__item__inner">用户列表</span>
-                    <span class="el-breadcrumb__separator">/</span>
-                </span>
-            </div>
-            <div class="el-dropdown"><img src="//elm.cangdu.org/img/default.jpg" class="avator">
-                <ul class="el-dropdown-menu" style="display: none;">
-                    <li class="el-dropdown-menu__item">首页</li>
-                    <li class="el-dropdown-menu__item">退出</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 用户列表 -->
-        <el-table :data="tableData2" style="width: 100%;padding:20px" :row-class-name="tableRowClassName">
-            <el-table-column prop="date" label="日期" width="180">
-            </el-table-column>
-            <el-table-column prop="name" label="姓名" width="180">
-            </el-table-column>
-            <el-table-column prop="address" label="地址">
-            </el-table-column>
-        </el-table>
+  <div class="fillcontain">
+    <!-- 头部标题 -->
+    <div class="header_container">
+      <div class="el-breadcrumb">
+        <span class="el-breadcrumb__item">
+          <span class="el-breadcrumb__item__inner">首页</span>
+          <span class="el-breadcrumb__separator">/</span>
+        </span>
+        <span class="el-breadcrumb__item">
+          <span class="el-breadcrumb__item__inner">数据管理</span>
+          <span class="el-breadcrumb__separator">/</span>
+        </span>
+        <span class="el-breadcrumb__item">
+          <span class="el-breadcrumb__item__inner">用户列表</span>
+          <span class="el-breadcrumb__separator">/</span>
+        </span>
+      </div>
+      <div class="el-dropdown"><img src="//elm.cangdu.org/img/default.jpg" class="avator">
+        <ul class="el-dropdown-menu" style="display: none;">
+          <li class="el-dropdown-menu__item">首页</li>
+          <li class="el-dropdown-menu__item">退出</li>
+        </ul>
+      </div>
     </div>
+
+    <!-- 用户列表 -->
+    <el-table :data="tableData2" style="width: 100%;padding:20px" :row-class-name="tableRowClassName">
+      <el-table-column prop="date" label="日期" width="180">
+      </el-table-column>
+      <el-table-column prop="name" label="姓名" width="180">
+      </el-table-column>
+      <el-table-column prop="address" label="地址">
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
-
-<style>
-.el-table .warning-row {
-  background: oldlace;
-}
-
-.el-table .success-row {
-  background: #f0f9eb;
-}
-</style>
-
 <script>
 export default {
   methods: {
@@ -130,5 +119,16 @@ html {
   top: 0;
   left: 0;
   min-width: 100px;
+}
+.el-table .warning-row {
+  background: oldlace;
+}
+
+.el-table .success-row {
+  background: #f0f9eb;
+}
+.fillcontain {
+  height: 100%;
+  width: 85%;
 }
 </style>
