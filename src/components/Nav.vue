@@ -106,4 +106,7 @@ export default {
   width: 100%;
   background-color: rgb(84, 92, 100);
 }
+.el-menu {
+    border: none;
+}
 </style>
