@@ -14,8 +14,6 @@ import {
     Col,
     Breadcrumb,//面包屑
     BreadcrumbItem,
-    Table,//表格
-    TableColumn,
     Button, //按钮
     Form,   //表单
     FormItem,
@@ -23,7 +21,7 @@ import {
     InputNumber,    //计数器
     Row,    //表格
     Select, //选择器
-    Option, 
+    Option,
     OptionGroup,
     Dialog, //对话框
     Pagination,//分页
