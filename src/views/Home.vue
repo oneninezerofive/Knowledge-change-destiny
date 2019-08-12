@@ -1,8 +1,9 @@
 <template>
   <el-container>
     <el-aside width="15%">
-      <Nav/>
+      <Nav />
     </el-aside>
+
     <!-- 路由 -->
     <router-view></router-view>
   </el-container>
@@ -11,11 +12,15 @@
 <script>
 import Nav from "../components/Nav.vue";
 export default {
+  data() {
+    return {};
+  },
   components: {
     Nav
   }
 };
 </script>
+
 
 <style>
 body,
@@ -37,8 +42,8 @@ p {
   padding: 0;
 }
 .el-aside {
-  min-height: 100%;
-  background-color: rgb(50, 64, 87);
+  min-height: 754px;
+  background-color: rgb(84, 92, 100);
   color: #fff;
   text-align: center;
   float: left;

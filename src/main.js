@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import VCharts from 'v-charts'
+Vue.use(VCharts)
 import App from './App.vue'
 // 样式
 import 'element-ui/lib/theme-chalk/index.css'

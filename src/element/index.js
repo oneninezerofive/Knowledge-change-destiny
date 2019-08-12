@@ -1,4 +1,6 @@
-import Vue from 'vue'
+import Vue from 'vue';
+import ElementUI from 'element-ui';
+Vue.use(ElementUI);
 //第三方组件
 import {
     Aside,
@@ -9,7 +11,12 @@ import {
     Submenu,
     MenuItem,
     MenuItemGroup,
-    Col
+    Col,
+    Breadcrumb,//面包屑
+    BreadcrumbItem,
+    Table,//表格
+    TableColumn,
+    Button//按钮
 } from 'element-ui'
 
 export default () => {
@@ -22,4 +29,9 @@ export default () => {
     Vue.use(MenuItem);
     Vue.use(MenuItemGroup);
     Vue.use(Col);
+    Vue.use(Breadcrumb);
+    Vue.use(BreadcrumbItem);
+    Vue.use(Table).use(TableColumn);
+    Vue.use(Button);
+
 }
