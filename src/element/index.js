@@ -16,7 +16,19 @@ import {
     BreadcrumbItem,
     Table,//表格
     TableColumn,
-    Button//按钮
+    Button, //按钮
+    Form,   //表单
+    FormItem,
+    Input,  //输入框
+    InputNumber,    //计数器
+    Row,    //表格
+    Select, //选择器
+    Option, 
+    OptionGroup,
+    Dialog, //对话框
+    Pagination,//分页
+    Table,//表格
+    TableColumn,
 } from 'element-ui'
 
 export default () => {
@@ -33,5 +45,11 @@ export default () => {
     Vue.use(BreadcrumbItem);
     Vue.use(Table).use(TableColumn);
     Vue.use(Button);
-
+    Vue.use(Form).use(FormItem);
+    Vue.use(Input).use(InputNumber);
+    Vue.use(Row);
+    Vue.use(Select);
+    Vue.use(Option).use(OptionGroup);
+    Vue.use(Dialog);
+    Vue.use(Pagination);
 }
