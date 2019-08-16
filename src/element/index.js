@@ -16,7 +16,8 @@ import {
     BreadcrumbItem,
     Table,//表格
     TableColumn,
-    Button//按钮
+    Button,//按钮
+    Input
 } from 'element-ui'
 
 export default () => {
@@ -33,5 +34,6 @@ export default () => {
     Vue.use(BreadcrumbItem);
     Vue.use(Table).use(TableColumn);
     Vue.use(Button);
+    Vue.use(Input);
 
 }

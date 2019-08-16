@@ -4,6 +4,9 @@ Vue.use(VCharts)
 import App from './App.vue'
 // 样式
 import 'element-ui/lib/theme-chalk/index.css'
+// 引入store状态管理
+import store from './store.js'
+
 
 // 全局引入
 import axios from 'axios'
@@ -21,10 +24,13 @@ Vant()
 import Element from './element/index';
 Element()
 
+
+
 Vue.config.productionTip = false
 
 new Vue({
   // 让容器装载这个路由插件
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

@@ -79,11 +79,13 @@ export default {
             message: "已取消删除"
           });
         });
+    },
+    handleEdit(index, row) {
+      // 点击编辑按钮存储信息到仓库，并跳转设置页
+      // console.log(row);
+      this.$store.commit("setData", row);
+      this.$router.push("./setup");
     }
-    // handleEdit(index, row) {
-    //   // console.log(row);
-    //   this.$router.push("./setup");
-    // }
   },
 
   // 请求表数据
