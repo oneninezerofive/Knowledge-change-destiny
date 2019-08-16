@@ -62,10 +62,13 @@ html {
   position: relative;
 }
 .avator {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 37px;
+  position: absolute;
+  top: -18px;
+  right: 70px;
 }
 .el-dropdown-menu {
   margin: 5px 0;

@@ -51,24 +51,24 @@ export default {
     return {
       tableData2: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "2019-08-09",
+          name: "小红",
+          address: "广东省天河区元岗"
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "2019-08-09",
+          name: "小风",
+          address: "广东省天河区元岗北街"
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "2019-08-09",
+          name: "小虎",
+          address: "广东省天河区元岗"
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "2019-08-09",
+          name: "小白",
+          address: "广东省天河区元岗北街"
         }
       ]
     };
@@ -104,10 +104,13 @@ html {
   position: relative;
 }
 .avator {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  margin-right: 37px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 37px;
+    position: absolute;
+    top: -18px;
+    right: 70px;
 }
 .el-dropdown-menu {
   margin: 5px 0;
