@@ -24,9 +24,9 @@
       </div>
       <div>
         管理员ID：
-        <el-input v-model="ID"></el-input>
+        <el-input v-model="ID" :disabled="true"></el-input>
       </div>
-      <el-button type="primary" @click="setmg()">设置</el-button>
+      <el-button type="primary" @click="setmg()">编辑</el-button>
     </div>
   </div>
 </template>
@@ -45,16 +45,24 @@ export default {
     };
   },
   methods: {
-    // 请求设置管理员信息
+    // 请求编辑管理员信息
     async setmg() {
-      await this.$axios.post("http://localhost:3000/mggai", {
-        params: {
-          name: this.name,
-          id: this.ID,
-          address: this.address,
-          time: this.time
-        }
+      // 请求
+      let res = await this.$axios.post("http://localhost:3000/mggai", {
+        name: this.name,
+        id: this.ID,
+        address: this.address,
+        time: this.time
       });
+      // console.log(res.data);
+      // 前端判断请求
+      if (res.data == "设置成功") {
+        alert("设置成功");
+        this.name = "";
+        this.ID = "";
+        this.address = "";
+        this.time = "";
+      }
     }
   },
   created() {

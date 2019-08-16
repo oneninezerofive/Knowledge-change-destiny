@@ -1,9 +1,4 @@
 <template>
-  <!-- <el-container>
-        <el-header>Header</el-header>
-        <el-main>Main</el-main>
-  </el-container>-->
-
   <!-- 面包屑导航 -->
   <div class="main">
     <el-breadcrumb separator="/home">
