@@ -95,7 +95,7 @@
                     tableData.name = item.book;
                     tableData.description = item.jianjie;
                     tableData.rating = item.author;
-                    // tableData.index = index;
+                    tableData.index = index;
                     this.count = index;
                     this.tableData.push(tableData);
 
